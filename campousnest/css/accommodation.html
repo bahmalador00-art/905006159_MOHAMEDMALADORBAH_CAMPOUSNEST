@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusNest | Accommodation Search & Filter</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .search-filter-banner {
+      background: var(--bg-white);
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+    .filters-sidebar {
+      background: var(--bg-white);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      height: fit-content;
+    }
+    .filters-sidebar h4 {
+      margin-bottom: 12px;
+      color: var(--secondary-color);
+      font-size: 1.05rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 5px;
+    }
+    .filter-section {
+      margin-bottom: 20px;
+    }
+    .filter-section label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+    .listings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 800px) {
+      .accommodation-layout {
+        grid-template-columns: 1fr !important;
+      }
+      .listings-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🏠 CampusNest</a>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="accommodation.html" class="active">Accommodation</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <section class="container">
+    <h2 class="section-title">Find Accommodation</h2>
+
+    <!-- Search Banner -->
+    <div class="search-filter-banner">
+      <h3 style="margin-bottom: 12px; font-size: 1.1rem; color: var(--secondary-color);">Search and filter to find the perfect place for your needs[cite: 6].</h3>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <input type="text" class="form-control" placeholder="Enter location or university..." style="flex: 1; min-width: 240px;">
+        <button class="btn btn-primary" onclick="alert('Searching listings...')">Search Now</button>
+      </div>
+    </div>
+
+    <!-- Main Grid: Sidebar Filters + Result Cards -->
+    <div style="display: grid; grid-template-columns: 260px 1fr; gap: 25px;" class="accommodation-layout">
+      
+      <!-- Filter Sidebar -->
+      <div class="filters-sidebar">
+        <h3 style="margin-bottom: 15px; color: var(--secondary-color);">Filter Results</h3>
+
+        <div class="filter-section">
+          <h4>Price Range</h4>
+          <label><input type="checkbox"> $100 - $200</label>
+          <label><input type="checkbox"> $201 - $300</label>
+          <label><input type="checkbox"> $301 - $400</label>
+          <label><input type="checkbox"> $401+</label>
+        </div>
+
+        <div class="filter-section">
+          <h4>Room Type</h4>
+          <label><input type="checkbox"> Single Room</label>
+          <label><input type="checkbox"> Shared Room</label>
+          <label><input type="checkbox"> Apartment</label>
+        </div>
+
+        <div class="filter-section">
+          <h4>Facilities</h4>
+          <label><input type="checkbox"> Parking</label>
+          <label><input type="checkbox"> Kitchen</label>
+          <label><input type="checkbox"> Laundry</label>
+          <label><input type="checkbox"> Security</label>
+        </div>
+
+        <button class="btn btn-accent" style="width: 100%; font-size: 0.9rem;" onclick="alert('Filters applied!')">Apply Filters</button>
+      </div>
+
+      <!-- Result Cards Grid -->
+      <div class="listings-grid">
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=500&q=80" alt="Sunrise Lodge">
+          <div class="card-body">
+            <h3 class="card-title">Sunrise Lodge</h3>
+            <p class="card-text">Freetown • Near Campus</p>
+            <div class="card-price">$250 / month</div>
+            <div style="display: flex; gap: 10px;">
+              <a href="contact.html" class="btn btn-primary" style="flex: 1; font-size: 0.85rem; padding: 8px;">View Details</a>
+              <a href="contact.html" class="btn btn-accent" style="flex: 1; font-size: 0.85rem; padding: 8px;">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=500&q=80" alt="Campus View Hostel">
+          <div class="card-body">
+            <h3 class="card-title">Campus View Hostel</h3>
+            <p class="card-text">Jui Junction • Student Hub</p>
+            <div class="card-price">$200 / month</div>
+            <div style="display: flex; gap: 10px;">
+              <a href="contact.html" class="btn btn-primary" style="flex: 1; font-size: 0.85rem; padding: 8px;">View Details</a>
+              <a href="contact.html" class="btn btn-accent" style="flex: 1; font-size: 0.85rem; padding: 8px;">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=500&q=80" alt="Scholars Apartment">
+          <div class="card-body">
+            <h3 class="card-title">Scholars Apartment</h3>
+            <p class="card-text">Brookfields • Modern Living</p>
+            <div class="card-price">$300 / month</div>
+            <div style="display: flex; gap: 10px;">
+              <a href="contact.html" class="btn btn-primary" style="flex: 1; font-size: 0.85rem; padding: 8px;">View Details</a>
+              <a href="contact.html" class="btn btn-accent" style="flex: 1; font-size: 0.85rem; padding: 8px;">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=500&q=80" alt="Hillside Residence">
+          <div class="card-body">
+            <h3 class="card-title">Hillside Residence</h3>
+            <p class="card-text">Lumley • Quiet & Secure</p>
+            <div class="card-price">$320 / month</div>
+            <div style="display: flex; gap: 10px;">
+              <a href="contact.html" class="btn btn-primary" style="flex: 1; font-size: 0.85rem; padding: 8px;">View Details</a>
+              <a href="contact.html" class="btn btn-accent" style="flex: 1; font-size: 0.85rem; padding: 8px;">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <h3>CampusNest</h3>
+      <p>Making Student Life Easier, One Home at a Time.</p>
+      <div class="footer-bottom">
+        &copy; 2026 CampusNest. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

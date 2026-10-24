@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusNest | About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom hero layout for About page with text on the left corner and image on the right */
+        .about-hero {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 40px;
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-hero-text {
+            text-align: left;
+        }
+
+        .about-hero-text .section-title {
+            text-align: left;
+        }
+
+        .about-hero-text .section-title::after {
+            margin: 8px 0 0 0;
+        }
+
+        .about-hero-img img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">🏠 CampusNest</a>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="services.html">Services</a>
+                <a href="accommodation.html">Accommodation</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="container">
+
+        <!-- Hero Section: Text Left Corner + Picture Right Corner -->
+        <div class="about-hero">
+            <div class="about-hero-text">
+                <h2 class="section-title">About CampusNest</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">
+                    Making Student Life Easier, one home at a time[cite: 6].
+                </p>
+            </div>
+            <div class="about-hero-img">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80"
+                    alt="CampusNest About Banner">
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="grid-2" style="margin-bottom: 40px;">
+            <div
+                style="background: var(--bg-white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); height: 100%;">
+                <h3 style="margin-bottom: 12px; color: var(--primary-color);">Our Mission</h3>
+                <p class="card-text">
+                    CampusNest is a student accommodation platform designed to help university and college students find
+                    safe, affordable and convenient places to live. We bring together trusted accommodation providers
+                    and students in one easy-to-use platform[cite: 6].
+                </p>
+            </div>
+            <div
+                style="background: var(--bg-white); padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); height: 100%;">
+                <h3 style="margin-bottom: 12px; color: var(--primary-color);">Our Vision</h3>
+                <p class="card-text">
+                    To be the leading student accommodation platform in Sierra Leone and beyond, connecting every
+                    student with secure, high-standard housing options near their academic institutions[cite: 6].
+                </p>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div
+            style="background-color: var(--bg-white); padding: 35px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <h3 style="margin-bottom: 20px; color: var(--secondary-color);">Why Choose Us?</h3>
+            <div class="grid-2">
+                <div>
+                    <h4 style="color: var(--primary-color); margin-bottom: 6px;">Wide Selection</h4>
+                    <p class="card-text" style="margin-bottom: 20px;">Access to a variety of accommodation options
+                        tailored for student needs[cite: 6].</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--primary-color); margin-bottom: 6px;">Verified Listings</h4>
+                    <p class="card-text" style="margin-bottom: 20px;">We ensure trusted and verified properties to
+                        protect students from scams[cite: 6].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <h3>CampusNest</h3>
+            <p>Making Student Life Easier, One Home at a Time.</p>
+            <div class="footer-bottom">
+                &copy; 2026 CampusNest. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', () => {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

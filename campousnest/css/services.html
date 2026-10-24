@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusNest | Our Services</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific left-aligned header style for the services section */
+    .services-header {
+      text-align: left;
+      margin-bottom: 35px;
+    }
+    
+    .services-header .section-title {
+      text-align: left;
+    }
+
+    /* Removes the default center underline alignment from the global section-title */
+    .services-header .section-title::after {
+      margin: 8px 0 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">🏠 CampusNest</a>
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="accommodation.html">Accommodation</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <section class="container">
+    
+    <!-- Left-Aligned Header Section -->
+    <div class="services-header">
+      <h2 class="section-title">Our Services</h2>
+      <p style="text-align: left; max-width: 600px; color: var(--text-muted);">
+        Everything you need to find the right accommodation[cite: 6].
+      </p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom: 30px;">
+      
+      <!-- Service Box 1 -->
+      <div style="background: var(--bg-white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h3 style="color: var(--primary-color); margin-bottom: 10px;">🔍 Search Accommodation</h3>
+        <p class="card-text">Easily search for available accommodation near your university or preferred location[cite: 6].</p>
+      </div>
+
+      <!-- Service Box 2 -->
+      <div style="background: var(--bg-white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h3 style="color: var(--primary-color); margin-bottom: 10px;">🎛️ Filter Options</h3>
+        <p class="card-text">Use filters to narrow down your search by price, location, room type, facilities, and more[cite: 6].</p>
+      </div>
+
+      <!-- Service Box 3 -->
+      <div style="background: var(--bg-white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h3 style="color: var(--primary-color); margin-bottom: 10px;">📋 View Details</h3>
+        <p class="card-text">Get complete information including photos, price, location, facilities, and contact details[cite: 6].</p>
+      </div>
+
+      <!-- Service Box 4 -->
+      <div style="background: var(--bg-white); padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+        <h3 style="color: var(--primary-color); margin-bottom: 10px;">✉️ Make Enquiry</h3>
+        <p class="card-text">Contact the accommodation provider directly through our secure platform[cite: 6].</p>
+      </div>
+
+    </div>
+
+    <!-- Need Help Callout -->
+    <div style="background-color: var(--bg-white); padding: 30px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); flex-wrap: wrap; gap: 20px;">
+      <div>
+        <h3 style="color: var(--secondary-color); margin-bottom: 5px;">Need Help?</h3>
+        <p class="card-text" style="margin-bottom: 0;">Our support team is here to assist you. Contact us anytime[cite: 6].</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <h3>CampusNest</h3>
+      <p>Making Student Life Easier, One Home at a Time.</p>
+      <div class="footer-bottom">
+        &copy; 2026 CampusNest. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
